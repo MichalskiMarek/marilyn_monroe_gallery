@@ -8,7 +8,7 @@ class Main extends Component {
             <article className={'article'}>
                 <section className={'titleSection'}>
                     <h1 className="title">Marilyn Monroe</h1>
-                    <p className={'location'}><FontAwesomeIcon icon="map-marker-alt" className={'map-marker-alt'}/>Poznań,
+                    <p className={'location'}><FontAwesomeIcon icon="map-marker-alt" className={'map-marker-alt'}/> Poznań,
                         PL</p>
                 </section>
                 <section className={'text'}>

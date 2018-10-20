@@ -2,18 +2,29 @@ import React, {Component} from 'react';
 import './App.scss';
 import Navigation from "../Navigation/Navigation";
 import {library} from '@fortawesome/fontawesome-svg-core'
-import {faUser, faImage, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import {faUser, faImage, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
 import Main from "../Main/Main";
+import {BrowserRouter, Route,Switch} from "react-router-dom";
+import Gallery from "../Gallery/Gallery";
+import NoMatch from "../NoMatch/NoMatch";
 
-library.add(faUser,faImage,faMapMarkerAlt);
+library.add(faUser, faImage, faMapMarkerAlt);
 
 class App extends Component {
     render() {
         return (
-            <div>
-                <Navigation/>
-                <Main/>
-            </div>
+            <BrowserRouter>
+                <div>
+                    <Navigation/>
+                    <Switch>
+                        <Route exact path={'/'} component={Main}/>
+                        <Route path={'/Gallery'} component={Gallery}/>
+                        <Route component={NoMatch}/>
+                    </Switch>
+
+                </div>
+            </BrowserRouter>
+
         );
     }
 }

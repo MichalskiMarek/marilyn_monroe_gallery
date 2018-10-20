@@ -1,4 +1,14 @@
 @import "../App/App";
+
+@mixin selected {
+  content: '';
+  width: 36px;
+  height: 36px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+}
+
 nav {
 
   .bg_image {
@@ -41,7 +51,31 @@ nav {
     .user_icon {
       color: white;
       font-size: 20px;
-      margin-right: 30px;
+      margin-right: 20px;
+      border: none;
+      background: transparent;
+      padding: 10px;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        color: darken(white, 10%)
+      }
+    }
+    .selected-user {
+      position: relative;
+      &:after {
+        @include selected;
+        right: 20px;
+        bottom: 3px;
+      }
+    }
+    .selected-image {
+      position: relative;
+      &:after {
+        @include selected;
+        right: 21px;
+        bottom: 3px;
+      }
     }
 
   }

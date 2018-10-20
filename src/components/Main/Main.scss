@@ -3,14 +3,16 @@
 .article {
   height: 100vh;
   margin: 0 30px;
+  color: $fontColorDark;
   .titleSection {
     margin-top: 40px;
     margin-bottom: 25px;
+
     .title {
 
     }
     .location {
-
+      color: $fontColorLight;
     }
   }
   .text {
@@ -21,7 +23,7 @@
     margin-bottom: 40px;
     max-width: 375px;
     border-left: 3px solid $navBg;
-    color: #A1A1A1;
+    color: $fontColorLight;
     padding-left: 16px;
     padding-bottom: 5px;
     margin-left: 30px;
