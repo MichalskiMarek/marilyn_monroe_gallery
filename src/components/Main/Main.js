@@ -11,17 +11,16 @@ class Main extends Component {
                     <p className={'location'}><FontAwesomeIcon icon="map-marker-alt" className={'map-marker-alt'}/> Poznań,
                         PL</p>
                 </section>
-                <section className={'text'}>
+                <section>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur cumque cupiditate eaque eius eligendi eos excepturi expedita, inventore nisi non nostrum sapiente tenetur vel voluptatem. Amet, delectus, iure! Et.
                 </section>
                 <blockquote className={'quote'}>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet, impedit inventore iure obcaecati perspiciatis quos repellat temporibus.
                 </blockquote>
-                <section className={'text'}>
+                <section>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur cumque cupiditate eaque eius eligendi eos excepturi expedita, inventore nisi non nostrum sapiente tenetur vel voluptatem. Amet, delectus, iure! Et.
                 </section>
             </article>
-
         );
     }
 }
