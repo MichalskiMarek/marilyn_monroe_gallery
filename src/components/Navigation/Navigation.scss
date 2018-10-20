@@ -65,7 +65,7 @@ nav {
       position: relative;
       &:after {
         @include selected;
-        right: 20px;
+        right: 0;
         bottom: 3px;
       }
     }
@@ -73,7 +73,7 @@ nav {
       position: relative;
       &:after {
         @include selected;
-        right: 21px;
+        right: 1px;
         bottom: 3px;
       }
     }

@@ -10,7 +10,7 @@ class Navigation extends Component {
                 <nav>
                     <div className={'bg_image'}/>
                     <div className={'main_nav'}>
-                        <NavLink to={'/'} activeClassName="selected-user" className={'user_icon'}>
+                        <NavLink exact to={'/'} activeClassName="selected-user" className={'user_icon'}>
                             <FontAwesomeIcon icon="user"/>
                         </NavLink>
                         <NavLink to={'/Gallery'} activeClassName="selected-image" className={'image_icon'}>

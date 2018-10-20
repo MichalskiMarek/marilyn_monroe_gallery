@@ -6,7 +6,7 @@ class NoMatch extends Component {
         return (
             <div className={'noMatch'}>
                 Not found :(
-                <img src="https://i.kym-cdn.com/photos/images/original/001/043/243/419.gif"/>
+                <img src="https://i.kym-cdn.com/photos/images/original/001/043/243/419.gif" alt={'Confused Vincent Vega'}/>
             </div>
         );
     }
