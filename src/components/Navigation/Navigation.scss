@@ -1,10 +1,6 @@
-$navBg: #7AD6BB;
+@import "../App/App";
 nav {
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+
   .bg_image {
     background-image: url("../../images/bg_image.jpg");
     height: 190px;

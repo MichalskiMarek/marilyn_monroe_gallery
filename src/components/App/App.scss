@@ -1,3 +1,5 @@
+$navBg: #7AD6BB;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +8,7 @@
 body {
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
+  justify-content: center;
+  margin: 0 auto;
 }
