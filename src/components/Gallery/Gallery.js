@@ -1,29 +1,17 @@
 import React, {Component} from 'react';
 import './Gallery.scss';
-import axios from "axios";
+import {connect} from 'react-redux';
+import { fetchPhotos} from "../../actions/photoAction";
 
 class Gallery extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            photos: []
-        }
-    }
 
-    componentDidMount() {
-        axios.get('https://api.flickr.com/services/feeds/photos_public.gne?tags=marilyn,monroe&format=json&nojsoncallback=true')
-            .then(response => {
-                response.data.items.forEach((element, index) => {
-                    if (index < 9) {
-                        this.setState({photos: [...this.state.photos, element]})
-                    }
-                })
-            });
+    componentWillMount() {
+     this.props.fetchPhotos();
     }
 
     render() {
-        const photos = this.state.photos.map((element, index) => {
-            return <a href={element.link} target={'blank'} key={index}><img className={'galleryPhoto'} src={element.media.m} alt="Marilyn Monroe tags"/></a>
+        const photos = this.props.photos.map((element, index) => {
+            return index<9 ? <a href={element.link} target={'blank'} key={index}><img className={'galleryPhoto'} src={element.media.m} alt="Marilyn Monroe tags"/></a> : null
         });
         return (
             <section className={'gallery'}>
@@ -33,4 +21,8 @@ class Gallery extends Component {
     }
 }
 
-export default Gallery;
+const mapStateToProps = state => ({
+    photos: state.photos.items
+});
+
+export default connect(mapStateToProps, {fetchPhotos})(Gallery);
