@@ -1,0 +1,13 @@
+.gallery {
+  margin-top: 20px;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .galleryPhoto {
+    transition: all 300ms ease-in-out;
+    &:hover {
+      filter: brightness(85%);
+    }
+  }
+}

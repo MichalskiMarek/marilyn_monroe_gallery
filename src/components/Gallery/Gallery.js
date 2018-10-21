@@ -13,20 +13,21 @@ class Gallery extends Component {
     componentDidMount() {
         axios.get('https://api.flickr.com/services/feeds/photos_public.gne?tags=marilyn,monroe&format=json&nojsoncallback=true')
             .then(response => {
-                response.data.items.forEach(el => {
-                    this.setState({photos: [...this.state.photos, el.link]});
+                response.data.items.forEach((element, index) => {
+                    if (index < 9) {
+                        this.setState({photos: [...this.state.photos, element]})
+                    }
                 })
-
             });
     }
 
     render() {
-
+        console.log(this.state.photos);
         return (
-            <div>
-               {this.state.photos.map((element,index)=>{
-                   return <img key={index} src={element} alt=""/>
-               })}
+            <div className={'gallery'}>
+                {this.state.photos.map((element, index) => {
+                    return <a href={element.link} target={'blank'} key={index}><img className={'galleryPhoto'} src={element.media.m} alt="Marilyn Monroe tags"/> </a>
+                })}
             </div>
         );
     }
