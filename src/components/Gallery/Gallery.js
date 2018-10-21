@@ -22,13 +22,13 @@ class Gallery extends Component {
     }
 
     render() {
-        console.log(this.state.photos);
+        const photos = this.state.photos.map((element, index) => {
+            return <a href={element.link} target={'blank'} key={index}><img className={'galleryPhoto'} src={element.media.m} alt="Marilyn Monroe tags"/></a>
+        });
         return (
-            <div className={'gallery'}>
-                {this.state.photos.map((element, index) => {
-                    return <a href={element.link} target={'blank'} key={index}><img className={'galleryPhoto'} src={element.media.m} alt="Marilyn Monroe tags"/> </a>
-                })}
-            </div>
+            <section className={'gallery'}>
+                {photos}
+            </section>
         );
     }
 }

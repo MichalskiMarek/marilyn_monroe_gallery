@@ -33,18 +33,20 @@ nav {
     position: relative;
 
     &:after {
-      content: '';
-      height: 117px;
-      width: 117px;
-      border-radius: 50%;
-      position: absolute;
-      bottom: -16px;
-      left: 30px;
-      background-clip: content-box;
-      border: 7px solid rgba(255, 255, 255, .5);
-      background-image: url("../../images/portrait_image.jpg");
-      background-position: center;
-      background-size: cover;
+      @media (min-width: 300px) {
+        content: '';
+        height: 117px;
+        width: 117px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -16px;
+        left: 30px;
+        background-clip: content-box;
+        border: 7px solid rgba(255, 255, 255, .5);
+        background-image: url("../../images/portrait_image.jpg");
+        background-position: center;
+        background-size: cover;
+      }
     }
 
     .image_icon,
