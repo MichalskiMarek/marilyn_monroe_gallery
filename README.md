@@ -1,3 +1,14 @@
+Marilyn Monroe gallery app (Flickr public photo API). Technologies used:
+-Javascript ES6
+-SCSS
+-React
+-Redux
+-Axios
+-Webpack
+-Yarn (create-react-app)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
