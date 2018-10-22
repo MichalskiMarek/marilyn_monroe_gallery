@@ -1,11 +1,18 @@
 Marilyn Monroe gallery app (Flickr public photo API). Technologies used:
 -Javascript ES6
+
 -SCSS
+
 -React
+
 -Redux
+
 -Axios
+
 -Webpack
+
 -Yarn (create-react-app)
+
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
