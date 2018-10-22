@@ -1,4 +1,5 @@
 Marilyn Monroe gallery app (Flickr public photo API). Technologies used:
+
 -Javascript ES6
 
 -SCSS
